@@ -6,6 +6,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input'; // Certifique-se de importar MatInputModule
+import { FormBuscaService } from '../../core/services/form-busca.service';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @Component({
@@ -18,11 +20,15 @@ import { MatInputModule } from '@angular/material/input'; // Certifique-se de im
     MatIconModule,
     MatFormFieldModule,
     MatSelectModule,
-    MatInputModule
+    MatInputModule,
+    ReactiveFormsModule
   ],
   templateUrl: './form-busca.component.html',
   styleUrls: ['./form-busca.component.scss']
 })
 export class FormBuscaComponent {
+  constructor(public formBuscaService: FormBuscaService) {
+
+  }
   
 }
