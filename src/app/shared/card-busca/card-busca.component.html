@@ -1,9 +1,9 @@
-<mat-card class="card-busca">
+<mat-card class="card-busca" *ngFor ="let produto of produtos">
   <img mat-card-image src="{{ produto.images }}" alt="">
   <mat-card-content>
     <ul>
       <li>{{produto.title}}</li>
-      <li>R$ {{produto.price }}</li>
+      <li>$ {{produto.price }}</li>
     </ul>
   </mat-card-content>
   <mat-card-actions>
