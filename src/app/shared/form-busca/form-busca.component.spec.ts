@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FormBuscaComponent } from './form-busca.component';
+import { CardComponent } from '../card/card.component';
+
 
 describe('FormBuscaComponent', () => {
   let component: FormBuscaComponent;
@@ -8,7 +10,10 @@ describe('FormBuscaComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [FormBuscaComponent]
+      imports: [
+        FormBuscaComponent,
+        CardComponent
+      ]
     })
     .compileComponents();
     
