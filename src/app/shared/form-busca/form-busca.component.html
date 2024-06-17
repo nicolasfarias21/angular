@@ -1,34 +1,32 @@
-<app-card variant="primary" class="form-busca">
-  <div class="container">
+<app-card variant="secondary" class="form-busca">
+  <form>
     <h2>Roupas</h2>
-    <div class="row">
-      <div class="col-md-6">
-        <form>
-          <div class="form-group">
-            <label for="nome">Buscar por Nome</label>
-            <input type="text" class="form-control" id="nome" placeholder="Digite o nome">
-          </div>
-          <div class="form-group">
-            <label for="categoria">Categoria</label>
-            <select class="form-control" id="categoria">
-              <option>Todos</option>
-              <option>Chapéus</option>
-              <option>Camisetas</option>
-              <option>Blusas</option>
-              <option>Calças</option>
-              <option>Bermudas</option>
-              <option>Calçados</option>
-            </select>
-          </div>
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" role="switch" id="modo-noturno">
-            <label class="form-check-label" for="modo-noturno">Modo noturno</label>
-          </div>
-          <button type="submit" class="btn btn-primary">Buscar</button>
-        </form>
-      </div>
+    <div class="flex-container">
+      <mat-button-toggle-group aria-label="Tipo de passagem">
+        <mat-button-toggle checked>TODOS</mat-button-toggle>
+        <mat-button-toggle>DISPONÍVEIS</mat-button-toggle>
+      </mat-button-toggle-group>
     </div>
-  </div>
-  
-  </app-card>
-  
+    <div class="flex-container">
+      <mat-form-field class="input-container" appearance="outline">
+        <mat-label>Título</mat-label>
+        <input matInput placeholder="Título">
+        <mat-icon matSuffix>search</mat-icon>
+      </mat-form-field>
+      
+      <mat-form-field class="input-container" appearance="outline">
+        <mat-label>Categorias</mat-label>
+        <mat-select placeholder="Categorias">
+          <mat-option value="todos">Camisetas</mat-option>
+          <mat-option value="cidade1">Calças</mat-option>
+          <mat-option value="cidade2">Sapatos</mat-option>
+          <mat-option value="cidade3">Acessorios</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <button mat-icon-button>
+        <mat-icon>sync_alt</mat-icon>
+      </button>
+      <button mat-flat-button color="primary">BUSCAR</button>
+    </div>
+  </form>
+</app-card>
