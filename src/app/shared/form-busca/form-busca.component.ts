@@ -18,7 +18,7 @@ import { MatInputModule } from '@angular/material/input'; // Certifique-se de im
     MatIconModule,
     MatFormFieldModule,
     MatSelectModule,
-    MatInputModule // Import MatInputModule
+    MatInputModule
   ],
   templateUrl: './form-busca.component.html',
   styleUrls: ['./form-busca.component.scss']
