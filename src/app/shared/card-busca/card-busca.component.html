@@ -1,10 +1,12 @@
 <mat-card class="card-busca">
-  <div class="card" style="width: 18rem;">
-    <img src="https://i.imgur.com/QkIa5tT.jpeg" alt="" srcset="">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <a href="#" class="btn botao-lilas branco rounded-0">Ver mais</a>
-    </div>
-  </div>
-  </mat-card>
-  
+  <img mat-card-image src="{{ produto.images }}" alt="">
+  <mat-card-content>
+    <ul>
+      <li>{{produto.title}}</li>
+      <li>R$ {{produto.price }}</li>
+    </ul>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-flat-button color="primary">VER DETALHES</button>
+  </mat-card-actions>
+</mat-card>
