@@ -1,14 +1,16 @@
-<mat-card class="card-busca" *ngFor ="let produto of sanitizedProdutos; let i = index">
-  <img mat-card-image [src]="safeImageUrls[i]" class="card-img-top" alt="Imagem não disponível">
-  <!-- Para aparecer todas Imagens 
-  <img *ngFor="let image of produto.images" [src]="image" alt="Product Image"> -->
-  <mat-card-content>
-    <ul>
-      <li>{{produto.title}}</li>
-      <li>$ {{produto.price }}</li>
-    </ul>
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-flat-button color="primary">VER DETALHES</button>
-  </mat-card-actions>
-</mat-card>
+<div class="row">
+  <div class="col-lg-4 col-md-6 mb-4" *ngFor="let produto of sanitizedProdutos; let i = index">
+    <mat-card class="card-busca">
+      <img mat-card-image [src]="safeImageUrls[i]" class="card-img-top" alt="Imagem não disponível">
+      <mat-card-content>
+        <ul>
+          <li>{{produto.title}}</li>
+          <li>$ {{produto.price }}</li>
+        </ul>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-flat-button color="primary">VER DETALHES</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
