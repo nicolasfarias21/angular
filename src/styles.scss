@@ -10,6 +10,20 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     margin: 40px;
 }
 @media screen and (max-width: 680px) {
+  .navbar-brand{
+    display: none;
+  }
+  .app-header[_ngcontent-ng-c1318330407] .mat-mdc-button[_ngcontent-ng-c1318330407]:not(:disabled){
+    font-size: 13px;
+  }
+  .navbar{
+    padding: 0%;
+    flex-wrap: nowrap;
+    height: 4rem;
+  }
+  .navbar-nav{
+    flex-direction: row;
+  }
  
 .form-busca[_ngcontent-ng-c3437021692] .flex-container[_ngcontent-ng-c3437021692]{
     flex-direction: column;
