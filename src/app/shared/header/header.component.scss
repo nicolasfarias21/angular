@@ -3,6 +3,7 @@
   top: 0;
   width: 100%;
   z-index: 1000; /* Ajuste conforme necessário para sobrepor outros elementos */
+  background-color: black;
   
   button{
     margin: 0rem .5rem;
@@ -25,8 +26,9 @@
   .mat-toolbar button[mat-stroked-button] {
       color: white;
     }
-  .mat-mdc-outlined-button:not(:disabled) {
-      border-color: white
+  .mat-mdc-button:not(:disabled) {
+      color: white;
   }
+  
 
 }
