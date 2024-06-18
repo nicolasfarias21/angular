@@ -1,5 +1,7 @@
-<mat-card class="card-busca" *ngFor ="let produto of produtos">
-  <img mat-card-image src="{{ produto.images }}" alt="">
+<mat-card class="card-busca" *ngFor ="let produto of sanitizedProdutos; let i = index">
+  <img mat-card-image [src]="safeImageUrls[i]" class="card-img-top" alt="Imagem não disponível">
+  <!-- Para aparecer todas Imagens 
+  <img *ngFor="let image of produto.images" [src]="image" alt="Product Image"> -->
   <mat-card-content>
     <ul>
       <li>{{produto.title}}</li>

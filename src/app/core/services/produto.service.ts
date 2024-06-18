@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Produto } from '../types/type';
 import { environment } from '../../../environments/environment';
 
 @Injectable({
@@ -15,7 +14,7 @@ export class ProdutoService {
     private httpClient : HttpClient
   ) { }
 
-  listar () : Observable<Produto[]> {
-    return this.httpClient.get<Produto[]>(`${this.apiUrl}/api/v1/products`)
+  listar () : Observable<any[]> {
+    return this.httpClient.get<any[]>(`${this.apiUrl}/api/v1/products`)
   }
 }
