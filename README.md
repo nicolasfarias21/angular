@@ -2,7 +2,7 @@ Clique [Aqui!](https://angular-jade-tau.vercel.app/), Para vizualizar o Projeto
 
 # L5 Ecommercer
 
-Esse projeto foi feito com [Angular CLI](https://github.com/angular/angular-cli) version 17.0.3.
+Esse projeto foi feito com Angular17
 
 ## Development server
 
