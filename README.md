@@ -6,4 +6,4 @@ Esse projeto foi feito com Angular17
 
 ## Development server
 
-Execute `ng serve` para um dev server. Navegue para `http://localhost:4200/`. A aplicação vai automaticamente recarregar se você mudar algum em alguem arquivo.
+Execute `ng serve` para um dev server. Navegue para `http://localhost:4200/`. A aplicação vai automaticamente recarregar se você mudar algo em algum arquivo.
