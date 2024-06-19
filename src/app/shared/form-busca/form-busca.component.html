@@ -1,32 +1,31 @@
 <app-card variant="secondary" class="form-busca">
-  <form [formGroup]="formBuscaService.formBusca">
+  <form [formGroup]="formBusca">
     <h2>Produtos</h2>
     <div class="flex-container">
       <mat-button-toggle-group aria-label="Tipo de passagem" formControlName="disponiveis">
-        <mat-button-toggle checked>TODOS</mat-button-toggle>
-        <mat-button-toggle>DISPONÍVEIS</mat-button-toggle>
+        <mat-button-toggle value="todos">TODOS</mat-button-toggle>
+        <mat-button-toggle value="disponiveis">DISPONÍVEIS</mat-button-toggle>
       </mat-button-toggle-group>
     </div>
     <div class="flex-container">
       <mat-form-field class="input-container" appearance="outline">
         <mat-label>Título</mat-label>
-        <input matInput placeholder="Título">
+        <input matInput placeholder="Título" formControlName="titulo">
         <mat-icon matSuffix>search</mat-icon>
       </mat-form-field>
       
       <mat-form-field class="input-container" appearance="outline">
         <mat-label>Categorias</mat-label>
-        <mat-select placeholder="Categorias">
-          <mat-option value="todos">Camisetas</mat-option>
-          <mat-option value="cidade1">Calças</mat-option>
-          <mat-option value="cidade2">Sapatos</mat-option>
-          <mat-option value="cidade3">Acessorios</mat-option>
+        <mat-select placeholder="Categorias" formControlName="categoria">
+          <mat-option *ngFor="let categoria of categorias" [value]="categoria.id">
+            {{ categoria.name }}
+          </mat-option>
         </mat-select>
       </mat-form-field>
       <button mat-icon-button>
         <mat-icon>sync_alt</mat-icon>
       </button>
-      <button mat-flat-button color="primary">BUSCAR</button>
+      <button mat-flat-button color="primary" (click)="buscar()">BUSCAR</button>
     </div>
   </form>
 </app-card>
